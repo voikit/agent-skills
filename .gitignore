@@ -1,0 +1,12 @@
+dist/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Terms the skills must never mention (suppliers, engines, internal names).
+# Kept out of the public repository on purpose; see scripts/lint_skills.py.
+.banned-terms.local
+
+# Local run logs and scratch
+runs/
+*.local.md

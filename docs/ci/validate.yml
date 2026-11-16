@@ -1,0 +1,33 @@
+name: validate
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Shared files are in sync
+        run: python3 scripts/sync_shared.py --check
+      - name: Lint skills
+        env:
+          # Comma-separated terms the skills must never mention. Kept as a secret
+          # so the list itself is not published.
+          VOIKIT_BANNED_TERMS: ${{ secrets.VOIKIT_BANNED_TERMS }}
+        run: python3 scripts/lint_skills.py
+      - name: Script self-checks
+        run: |
+          python3 skills/voikit-ai-agents/scripts/text_check.py --kind greeting "Thank you for calling. How can I help?"
+          echo '{"sat":[["09:00","17:00"]]}' > /tmp/hours.json
+          python3 skills/voikit-call-center/scripts/hours_check.py /tmp/hours.json --at "sat 10:00"
+          echo '[{"id":"T1","must":true,"result":"pass"}]' > /tmp/results.json
+          python3 skills/voikit-qa-testing/scripts/scorecard.py /tmp/results.json

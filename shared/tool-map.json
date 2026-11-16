@@ -1,0 +1,1807 @@
+{
+ "generated": "2026-11-16",
+ "source": "source definitions",
+ "count": 180,
+ "tools": [
+  {
+   "name": "account_overview",
+   "domain": "account",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Account overview"
+  },
+  {
+   "name": "ask_ava",
+   "domain": "account",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Ask Ava"
+  },
+  {
+   "name": "cancel_change",
+   "domain": "account",
+   "kind": "control",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Withdraw a pending change"
+  },
+  {
+   "name": "capabilities",
+   "domain": "account",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "What this connection can do"
+  },
+  {
+   "name": "diagnose",
+   "domain": "account",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Diagnose calls"
+  },
+  {
+   "name": "feature_availability",
+   "domain": "account",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Is a feature available here?"
+  },
+  {
+   "name": "fetch",
+   "domain": "account",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Fetch a record"
+  },
+  {
+   "name": "get_change",
+   "domain": "account",
+   "kind": "control",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Status of a change"
+  },
+  {
+   "name": "list_changes",
+   "domain": "account",
+   "kind": "control",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "List proposed changes"
+  },
+  {
+   "name": "list_safe_points",
+   "domain": "account",
+   "kind": "control",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Safe points"
+  },
+  {
+   "name": "revert_change",
+   "domain": "account",
+   "kind": "control",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Revert an applied change"
+  },
+  {
+   "name": "save_safe_point",
+   "domain": "account",
+   "kind": "control",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Save a safe point"
+  },
+  {
+   "name": "search",
+   "domain": "account",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Search the account"
+  },
+  {
+   "name": "search_help",
+   "domain": "account",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Search Voikit help"
+  },
+  {
+   "name": "support_create_ticket",
+   "domain": "account",
+   "kind": "control",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Open a support ticket"
+  },
+  {
+   "name": "support_departments",
+   "domain": "account",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Voikit support departments"
+  },
+  {
+   "name": "support_get_ticket",
+   "domain": "account",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "One support ticket"
+  },
+  {
+   "name": "support_list_tickets",
+   "domain": "account",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Support tickets"
+  },
+  {
+   "name": "support_reply_ticket",
+   "domain": "account",
+   "kind": "control",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Reply on a support ticket"
+  },
+  {
+   "name": "support_solve_ticket",
+   "domain": "account",
+   "kind": "control",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Mark a support ticket solved"
+  },
+  {
+   "name": "agents_add_rule",
+   "domain": "agents",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Add an operator rule"
+  },
+  {
+   "name": "agents_create",
+   "domain": "agents",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Create an operator"
+  },
+  {
+   "name": "agents_create_from_template",
+   "domain": "agents",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Create an operator from a template"
+  },
+  {
+   "name": "agents_edit_prompt",
+   "domain": "agents",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Edit the system prompt"
+  },
+  {
+   "name": "agents_get",
+   "domain": "agents",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Operator details"
+  },
+  {
+   "name": "agents_list",
+   "domain": "agents",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "AI operators"
+  },
+  {
+   "name": "agents_list_knowledge",
+   "domain": "agents",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Knowledge items"
+  },
+  {
+   "name": "agents_list_models",
+   "domain": "agents",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Allowed AI models"
+  },
+  {
+   "name": "agents_list_templates",
+   "domain": "agents",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Voikit agent templates"
+  },
+  {
+   "name": "agents_list_voices",
+   "domain": "agents",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Available voices"
+  },
+  {
+   "name": "agents_retire",
+   "domain": "agents",
+   "kind": "write",
+   "risk": "high",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Retire an operator"
+  },
+  {
+   "name": "agents_set_active",
+   "domain": "agents",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Switch an operator on / off"
+  },
+  {
+   "name": "agents_set_departments",
+   "domain": "agents",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Smart-reception departments"
+  },
+  {
+   "name": "agents_set_greeting",
+   "domain": "agents",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Operator greeting"
+  },
+  {
+   "name": "agents_set_name",
+   "domain": "agents",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Operator name"
+  },
+  {
+   "name": "agents_set_transfer",
+   "domain": "agents",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Transfer to a colleague"
+  },
+  {
+   "name": "agents_update",
+   "domain": "agents",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Update an operator"
+  },
+  {
+   "name": "billing_get_balance",
+   "domain": "billing",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Credit & plan"
+  },
+  {
+   "name": "billing_list_transactions",
+   "domain": "billing",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Credit transactions"
+  },
+  {
+   "name": "appointments_availability",
+   "domain": "callcenter",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Free slots"
+  },
+  {
+   "name": "appointments_cancel",
+   "domain": "callcenter",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Cancel an appointment"
+  },
+  {
+   "name": "appointments_create",
+   "domain": "callcenter",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Book an appointment"
+  },
+  {
+   "name": "appointments_list",
+   "domain": "callcenter",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Appointments"
+  },
+  {
+   "name": "callcenter_add_holiday",
+   "domain": "callcenter",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Add a holiday"
+  },
+  {
+   "name": "callcenter_create_queue",
+   "domain": "callcenter",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Create a queue"
+  },
+  {
+   "name": "callcenter_create_ring_group",
+   "domain": "callcenter",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Create a ring group"
+  },
+  {
+   "name": "callcenter_get_config",
+   "domain": "callcenter",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Call-center configuration"
+  },
+  {
+   "name": "callcenter_get_status",
+   "domain": "callcenter",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Phone system status"
+  },
+  {
+   "name": "callcenter_remove_holiday",
+   "domain": "callcenter",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Remove a holiday"
+  },
+  {
+   "name": "callcenter_set_destination",
+   "domain": "callcenter",
+   "kind": "write",
+   "risk": "high",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Destination in / after hours"
+  },
+  {
+   "name": "callcenter_set_hours",
+   "domain": "callcenter",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Change business hours"
+  },
+  {
+   "name": "callcenter_set_queue_members",
+   "domain": "callcenter",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Queue members"
+  },
+  {
+   "name": "callcenter_set_recording",
+   "domain": "callcenter",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Call recording"
+  },
+  {
+   "name": "callcenter_set_voicemail_notify",
+   "domain": "callcenter",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Voicemail notices"
+  },
+  {
+   "name": "callcenter_update_queue",
+   "domain": "callcenter",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Update a queue"
+  },
+  {
+   "name": "callcenter_update_ring_group",
+   "domain": "callcenter",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Update a ring group"
+  },
+  {
+   "name": "calls_list",
+   "domain": "callcenter",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Recent calls"
+  },
+  {
+   "name": "numbers_list",
+   "domain": "callcenter",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Phone numbers"
+  },
+  {
+   "name": "numbers_set_route",
+   "domain": "callcenter",
+   "kind": "write",
+   "risk": "high",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Where a number's calls go"
+  },
+  {
+   "name": "campaigns_get",
+   "domain": "campaigns",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "One campaign"
+  },
+  {
+   "name": "campaigns_how_to_start",
+   "domain": "campaigns",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "How a campaign is started"
+  },
+  {
+   "name": "campaigns_list",
+   "domain": "campaigns",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Campaigns"
+  },
+  {
+   "name": "campaigns_pause",
+   "domain": "campaigns",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": true,
+   "title": "Pause a campaign"
+  },
+  {
+   "name": "campaigns_stop",
+   "domain": "campaigns",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": true,
+   "title": "Stop a campaign"
+  },
+  {
+   "name": "contacts_search",
+   "domain": "contacts",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Search contacts"
+  },
+  {
+   "name": "contacts_set_profile",
+   "domain": "contacts",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Contact name & notes"
+  },
+  {
+   "name": "contacts_timeline",
+   "domain": "contacts",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "A contact's timeline"
+  },
+  {
+   "name": "automations_activity",
+   "domain": "conversations",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Recent comments and what happened"
+  },
+  {
+   "name": "automations_create",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": true,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Create a comment rule"
+  },
+  {
+   "name": "automations_delete",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": true,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Delete a comment rule"
+  },
+  {
+   "name": "automations_entry_points",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": true,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Instagram ice breakers and chat menu"
+  },
+  {
+   "name": "automations_entry_points_get",
+   "domain": "conversations",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Read Instagram ice breakers and menu"
+  },
+  {
+   "name": "automations_list",
+   "domain": "conversations",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Instagram comment rules"
+  },
+  {
+   "name": "automations_media",
+   "domain": "conversations",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Instagram posts and reels"
+  },
+  {
+   "name": "automations_media_upload",
+   "domain": "conversations",
+   "kind": "control",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Upload a file for a rule"
+  },
+  {
+   "name": "automations_reorder",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": true,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Order the comment rules"
+  },
+  {
+   "name": "automations_review_decide",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": true,
+   "customer_facing": true,
+   "risk_reducer": false,
+   "title": "Approve or reject a comment reply"
+  },
+  {
+   "name": "automations_reviews",
+   "domain": "conversations",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Replies waiting for approval"
+  },
+  {
+   "name": "automations_settings",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Pause all rules / hide spam"
+  },
+  {
+   "name": "automations_test",
+   "domain": "conversations",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Test the comment rules"
+  },
+  {
+   "name": "automations_toggle",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Turn a comment rule on or off"
+  },
+  {
+   "name": "automations_update",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": true,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Change a comment rule"
+  },
+  {
+   "name": "conversations_add_note",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Internal note on a conversation"
+  },
+  {
+   "name": "conversations_assign",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Assign a conversation"
+  },
+  {
+   "name": "conversations_get",
+   "domain": "conversations",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "One conversation with messages"
+  },
+  {
+   "name": "conversations_list",
+   "domain": "conversations",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Conversations"
+  },
+  {
+   "name": "conversations_reply",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": true,
+   "customer_facing": true,
+   "risk_reducer": false,
+   "title": "Reply to the customer"
+  },
+  {
+   "name": "conversations_set_mode",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Hand over to a human / back to AI"
+  },
+  {
+   "name": "conversations_set_status",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Set conversation status"
+  },
+  {
+   "name": "leads_analyze",
+   "domain": "conversations",
+   "kind": "control",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Read a lead's conversation again"
+  },
+  {
+   "name": "leads_get",
+   "domain": "conversations",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "One lead with its timeline"
+  },
+  {
+   "name": "leads_list",
+   "domain": "conversations",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Instagram leads"
+  },
+  {
+   "name": "leads_opt_out",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Stop automatic messages to a lead"
+  },
+  {
+   "name": "leads_set_stage",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Move a lead to a stage"
+  },
+  {
+   "name": "leads_settings_get",
+   "domain": "conversations",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Lead and follow-up settings"
+  },
+  {
+   "name": "leads_settings_update",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": true,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Change lead and follow-up settings"
+  },
+  {
+   "name": "leads_suggestion",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Confirm the number the assistant saw"
+  },
+  {
+   "name": "showcases_create",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Create a product showcase"
+  },
+  {
+   "name": "showcases_delete",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": true,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Delete a product showcase"
+  },
+  {
+   "name": "showcases_list",
+   "domain": "conversations",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Product showcases"
+  },
+  {
+   "name": "showcases_send",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": true,
+   "customer_facing": true,
+   "risk_reducer": false,
+   "title": "Send a showcase to a customer"
+  },
+  {
+   "name": "showcases_update",
+   "domain": "conversations",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Change a product showcase"
+  },
+  {
+   "name": "crm_add_comment",
+   "domain": "crm",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Add a note to a task"
+  },
+  {
+   "name": "crm_cancel_ai_call",
+   "domain": "crm",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": true,
+   "title": "Cancel a scheduled call"
+  },
+  {
+   "name": "crm_close_task",
+   "domain": "crm",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Close a task"
+  },
+  {
+   "name": "crm_create_customer",
+   "domain": "crm",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Create a customer"
+  },
+  {
+   "name": "crm_create_task",
+   "domain": "crm",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Create a CRM task"
+  },
+  {
+   "name": "crm_get_customer",
+   "domain": "crm",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Customer file"
+  },
+  {
+   "name": "crm_get_task",
+   "domain": "crm",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Task detail"
+  },
+  {
+   "name": "crm_list_customers",
+   "domain": "crm",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Customers"
+  },
+  {
+   "name": "crm_list_pipelines",
+   "domain": "crm",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Pipelines & stages"
+  },
+  {
+   "name": "crm_list_tasks",
+   "domain": "crm",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "CRM tasks"
+  },
+  {
+   "name": "crm_move_task",
+   "domain": "crm",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Move a task to a stage"
+  },
+  {
+   "name": "crm_reopen_task",
+   "domain": "crm",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Reopen a task"
+  },
+  {
+   "name": "crm_schedule_ai_call",
+   "domain": "crm",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": true,
+   "customer_facing": true,
+   "risk_reducer": false,
+   "title": "Schedule an AI follow-up call"
+  },
+  {
+   "name": "crm_set_assignees",
+   "domain": "crm",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Set a task's assignees"
+  },
+  {
+   "name": "crm_set_followup_agent",
+   "domain": "crm",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Follow-up agent per task type"
+  },
+  {
+   "name": "crm_task_by_code",
+   "domain": "crm",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Task by tracking code"
+  },
+  {
+   "name": "crm_update_task",
+   "domain": "crm",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Update a task"
+  },
+  {
+   "name": "flows_attach",
+   "domain": "flows",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Attach a flow to an operator"
+  },
+  {
+   "name": "flows_create",
+   "domain": "flows",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Create a flow"
+  },
+  {
+   "name": "flows_delete",
+   "domain": "flows",
+   "kind": "write",
+   "risk": "high",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Delete a flow"
+  },
+  {
+   "name": "flows_edit",
+   "domain": "flows",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Edit flow nodes"
+  },
+  {
+   "name": "flows_forms",
+   "domain": "flows",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Forms"
+  },
+  {
+   "name": "flows_get",
+   "domain": "flows",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Flow details"
+  },
+  {
+   "name": "flows_list",
+   "domain": "flows",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Flows"
+  },
+  {
+   "name": "flows_node_types",
+   "domain": "flows",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Flow node types"
+  },
+  {
+   "name": "flows_set_active",
+   "domain": "flows",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Switch a flow on/off"
+  },
+  {
+   "name": "flows_templates",
+   "domain": "flows",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Flow templates"
+  },
+  {
+   "name": "flows_update",
+   "domain": "flows",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Replace a flow"
+  },
+  {
+   "name": "flows_validate",
+   "domain": "flows",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Validate a flow"
+  },
+  {
+   "name": "forms_create",
+   "domain": "flows",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Create a form"
+  },
+  {
+   "name": "forms_delete",
+   "domain": "flows",
+   "kind": "write",
+   "risk": "high",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Delete a form"
+  },
+  {
+   "name": "forms_get",
+   "domain": "flows",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Form detail"
+  },
+  {
+   "name": "forms_list",
+   "domain": "flows",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Forms"
+  },
+  {
+   "name": "forms_set_active",
+   "domain": "flows",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Switch a form on or off"
+  },
+  {
+   "name": "forms_submissions",
+   "domain": "flows",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Form answers"
+  },
+  {
+   "name": "forms_update",
+   "domain": "flows",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Edit a form"
+  },
+  {
+   "name": "business_intake",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Take in what the owner says about the business"
+  },
+  {
+   "name": "business_profile_get",
+   "domain": "knowledge",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Business profile"
+  },
+  {
+   "name": "knowledge_add_qa",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Add a Q&A"
+  },
+  {
+   "name": "knowledge_add_site",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Add a website to read"
+  },
+  {
+   "name": "knowledge_add_text",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Add a text to the knowledge"
+  },
+  {
+   "name": "knowledge_connector_sync",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Full sync of a connection"
+  },
+  {
+   "name": "knowledge_connector_test",
+   "domain": "knowledge",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Test a site connection"
+  },
+  {
+   "name": "knowledge_connectors",
+   "domain": "knowledge",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Site & store connections"
+  },
+  {
+   "name": "knowledge_create_folder",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Create a knowledge folder"
+  },
+  {
+   "name": "knowledge_create_product",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Add a product"
+  },
+  {
+   "name": "knowledge_delete_item",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "high",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Delete a knowledge item"
+  },
+  {
+   "name": "knowledge_delete_products",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "high",
+   "sensitive": true,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Delete products"
+  },
+  {
+   "name": "knowledge_delete_qa",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Delete a Q&A"
+  },
+  {
+   "name": "knowledge_list",
+   "domain": "knowledge",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Knowledge items and folders"
+  },
+  {
+   "name": "knowledge_list_products",
+   "domain": "knowledge",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Products"
+  },
+  {
+   "name": "knowledge_list_qa",
+   "domain": "knowledge",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Knowledge Q&A"
+  },
+  {
+   "name": "knowledge_move",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Move into a folder"
+  },
+  {
+   "name": "knowledge_test_answer",
+   "domain": "knowledge",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Test a customer answer"
+  },
+  {
+   "name": "knowledge_update_product",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Update a product"
+  },
+  {
+   "name": "knowledge_update_qa",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Update a Q&A"
+  },
+  {
+   "name": "knowledge_update_text",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Update a knowledge text"
+  },
+  {
+   "name": "learning_decide",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Decide a learning proposal"
+  },
+  {
+   "name": "learning_list_findings",
+   "domain": "knowledge",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Learning proposals"
+  },
+  {
+   "name": "memory_feedback",
+   "domain": "knowledge",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Feedback on the assistant's answers"
+  },
+  {
+   "name": "memory_get",
+   "domain": "knowledge",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Business memory (charter)"
+  },
+  {
+   "name": "memory_learn_fact",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "low",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Remember a business fact"
+  },
+  {
+   "name": "memory_remove_rule",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Remove a business rule"
+  },
+  {
+   "name": "memory_rollback",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Restore a business memory version"
+  },
+  {
+   "name": "memory_set_policies",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Several business policies at once"
+  },
+  {
+   "name": "memory_set_policy",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "A business policy"
+  },
+  {
+   "name": "memory_set_rule",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Add or change a business rule"
+  },
+  {
+   "name": "memory_set_rules",
+   "domain": "knowledge",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Several business rules at once"
+  },
+  {
+   "name": "memory_versions",
+   "domain": "knowledge",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Business memory history"
+  },
+  {
+   "name": "reports_summary",
+   "domain": "reports",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Report summary"
+  },
+  {
+   "name": "settings_business_profile_set",
+   "domain": "settings",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Correct the business profile"
+  },
+  {
+   "name": "settings_get",
+   "domain": "settings",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Account settings"
+  },
+  {
+   "name": "settings_smart_defaults_apply",
+   "domain": "settings",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Apply smart defaults"
+  },
+  {
+   "name": "settings_smart_defaults_get",
+   "domain": "settings",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Smart defaults"
+  },
+  {
+   "name": "settings_update_profile",
+   "domain": "settings",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Update the account profile"
+  },
+  {
+   "name": "sms_list",
+   "domain": "sms",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Sent SMS"
+  },
+  {
+   "name": "sms_send",
+   "domain": "sms",
+   "kind": "write",
+   "risk": "medium",
+   "sensitive": true,
+   "customer_facing": true,
+   "risk_reducer": false,
+   "title": "Send an SMS"
+  },
+  {
+   "name": "team_list_members",
+   "domain": "team",
+   "kind": "read",
+   "risk": null,
+   "sensitive": false,
+   "customer_facing": false,
+   "risk_reducer": false,
+   "title": "Team members"
+  }
+ ]
+}

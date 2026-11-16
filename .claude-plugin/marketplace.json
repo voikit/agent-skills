@@ -1,0 +1,18 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "voikit-agent-skills",
+  "description": "Skills for setting up and running a Voikit account through the Voikit MCP server",
+  "owner": {
+    "name": "Voikit",
+    "url": "https://voikit.ai"
+  },
+  "plugins": [
+    {
+      "name": "voikit",
+      "description": "Skills that set up and run a Voikit account: AI operators, knowledge base, call center, CRM follow-ups, messaging, testing, reviews, and done-for-you Premium deployment.",
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/voikit/agent-skills"
+    }
+  ]
+}

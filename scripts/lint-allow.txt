@@ -1,0 +1,24 @@
+# Identifiers that appear in backticks and are NOT tool names
+# (result fields, arguments, statuses). One per line.
+change_id
+idempotency_key
+pending_confirmation
+no_change
+setup_required
+rejected_in_client
+plan_required
+rate_limited
+invalid_args
+not_found
+dry_run
+how_to_confirm
+expires_at
+all_sources
+company_name
+never_promise
+include_prompt
+for_task_type
+weekly_review
+after_hours_setup
+crm_cleanup
+knowledge_from_site
