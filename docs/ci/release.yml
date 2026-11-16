@@ -1,7 +1,6 @@
 # GitHub Actions workflow. Copy this file to .github/workflows/release.yml to switch it on.
-# After that, publishing a version is:   git tag v0.1.0 && git push origin v0.1.0
-# The zips (voikit.zip first of all) are attached to the release, so this link always works:
-#   https://github.com/voikit/agent-skills/releases/latest/download/voikit.zip
+# Publishing a version:   git tag v0.1.1 && git push origin v0.1.1
+# The logic lives in scripts/build_release.py; see docs/releasing.md.
 
 name: release
 
@@ -20,11 +19,14 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Build the zips (runs the lint first)
+      - name: Build and check the release files
         env:
           VOIKIT_BANNED_TERMS: ${{ secrets.VOIKIT_BANNED_TERMS }}
-        run: python3 scripts/build_release.py
+        run: python3 scripts/build_release.py --tag "$GITHUB_REF_NAME"
       - name: Publish the release
         env:
           GH_TOKEN: ${{ github.token }}
-        run: gh release create "$GITHUB_REF_NAME" dist/*.zip --title "$GITHUB_REF_NAME" --generate-notes
+        run: |
+          xargs -a dist/RELEASE_ASSETS.txt gh release create "$GITHUB_REF_NAME" \
+            --title "Voikit Agent Skills ${GITHUB_REF_NAME#v}" \
+            --notes-file dist/RELEASE_NOTES.md

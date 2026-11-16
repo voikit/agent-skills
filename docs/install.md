@@ -14,7 +14,7 @@ A skill is a folder with a `SKILL.md` file. `voikit.zip` is one skill, named `vo
 
 ### Claude (web, desktop, mobile)
 
-- Upload `voikit.zip` in your skills settings.
+- Open your skills settings, choose to upload a skill, and drag `voikit.zip` onto the skill file box. The preview shows one skill named `voikit`. Press upload.
 - Or paste this repository's address into a chat and ask Claude to install the Voikit skill.
 
 - Paste-in prompt: "Install the Voikit skill from https://github.com/voikit/agent-skills (the file bundle/voikit.md), then help me connect my Voikit account."
@@ -43,17 +43,19 @@ For one project only, copy them into that project's `.claude/skills/`.
 
 ### Other Agent Skills clients (Codex, Cursor and others)
 
-Run `npx skills add voikit/agent-skills`, or copy the folders in `skills/` into the client's skills directory. If the client has no skills support, paste `bundle/voikit.md` at the top of a chat; it then works as a mode, without the guides and the optional scripts.
+Run `npx skills add voikit/agent-skills`, or copy the folders in `skills/` into the client's skills directory. If the client has no skills support, paste `bundle/voikit.md` at the top of a chat; it then works as a mode, reading the guides from this repository when it can.
 
 ### Where the zips come from
 
-From the Releases page of this repository, or build them:
+`voikit.zip` is on the Releases page of this repository (always the newest: https://github.com/voikit/agent-skills/releases/latest/download/voikit.zip). To build it yourself:
 
 ```
 python3 scripts/build_release.py
 ```
 
-`dist/voikit.zip` is the one-file skill; `dist/<skill>.zip` holds one skill; `dist/voikit-agent-skills.zip` holds the folders as they are.
+`dist/voikit.zip` is the one-file skill; `dist/single-skills/<skill>.zip` holds one skill each.
+
+The upload pages accept a zip with exactly one folder and exactly one `SKILL.md`. Every zip in `dist/` is built that way. A zip of the whole repository (GitHub's "Download ZIP") holds many skills and is refused.
 
 ## Part 2 - the Voikit connector
 

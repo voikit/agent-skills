@@ -1,7 +1,7 @@
 {
   "name": "voikit",
   "description": "Skills that set up and run a Voikit account through the Voikit MCP server: connect and change safely, onboarding, AI operators, knowledge base, business charter, call center, CRM follow-ups, conversations, Instagram automation, flows and forms, appointments, campaigns, go-live testing, reviews, support, industry playbooks, and done-for-you Premium deployment.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "Voikit",
     "url": "https://voikit.ai"

@@ -2,7 +2,19 @@
 
 All notable changes to the skills. Versions follow semantic versioning.
 
-## 0.1.0 - unreleased
+## 0.1.1 - 2026-11-16
+
+Releases that install without surprises.
+
+- A release now offers one download for every app: `voikit.zip`, with its checksum. The archive of all folders is gone; upload pages refused it.
+- The build checks every zip against the rules of the upload pages (one folder, one `SKILL.md`, name, description, frontmatter keys, standard folders) and stops the release when one fails.
+- Inside `voikit.zip` the guides moved into `references/`, so the skill uses only the standard folders of the Agent Skills format.
+- `voikit.zip` carries optional metadata for ChatGPT and Codex (`agents/openai.yaml`): a display name, a starter prompt and the Voikit connector it works with.
+- The skill knows its version and where the newest file is.
+- Release notes are written from this changelog, with install and update steps at the top.
+- `docs/releasing.md`: the steps and the checks of a release.
+
+## 0.1.0 - 2026-11-16
 
 First set of skills.
 

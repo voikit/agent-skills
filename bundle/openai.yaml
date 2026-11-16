@@ -1,0 +1,14 @@
+# Optional metadata read by ChatGPT and Codex. Other apps ignore this file.
+# It names the skill in the app and declares the Voikit connector it works with.
+interface:
+  display_name: "Voikit"
+  short_description: "Set up and run your Voikit account"
+  default_prompt: "Connect my Voikit account and show me what you can do."
+
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "voikit"
+      description: "Voikit MCP server: read and configure one Voikit account"
+      transport: "streamable_http"
+      url: "https://voikit.ai/mcp"

@@ -1,3 +1,5 @@
+# GitHub Actions workflow. Copy this file to .github/workflows/validate.yml to switch it on.
+
 name: validate
 
 on:
@@ -24,6 +26,8 @@ jobs:
           # so the list itself is not published.
           VOIKIT_BANNED_TERMS: ${{ secrets.VOIKIT_BANNED_TERMS }}
         run: python3 scripts/lint_skills.py
+      - name: Release file builds and passes the upload rules
+        run: python3 scripts/build_release.py
       - name: Script self-checks
         run: |
           python3 skills/voikit-ai-agents/scripts/text_check.py --kind greeting "Thank you for calling. How can I help?"

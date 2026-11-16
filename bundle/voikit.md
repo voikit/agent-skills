@@ -67,27 +67,27 @@ Read `references/operating-rules.md` when it is available. The essentials, in ca
 
 ## 4. Pick the guide for the job
 
-Each job has a guide in `guides/`. Read the guide before you act. When a guide mentions a skill called `voikit-something`, it means the guide `guides/voikit-something.md` in this folder.
+Each job has a guide in `references/`. Read the guide before you act. When a guide mentions a skill called `voikit-something`, it means the guide `references/voikit-something.md` in this folder. File paths inside a guide start at this skill's folder.
 
 | The person wants | Guide |
 |---|---|
-| The connection explained, a change followed or undone | `guides/voikit-mcp.md` |
-| A full setup, from an empty account to answering calls | `guides/voikit-onboarding.md` |
-| An AI operator created or changed: greeting, rules, transfer, voice | `guides/voikit-ai-agents.md` |
-| Correct answers: website, questions and answers, products, store | `guides/voikit-knowledge-base.md` |
-| Musts and nevers, policies, tone | `guides/voikit-business-memory.md` |
-| Hours, holidays, who answers, ring groups, queues, voicemail | `guides/voikit-call-center.md` |
-| Customers, tasks, follow-ups, scheduled AI calls | `guides/voikit-crm-followups.md` |
-| The inbox, replies, SMS, who answers chats | `guides/voikit-conversations.md` |
-| Instagram comment rules, leads, product cards | `guides/voikit-instagram-automation.md` |
-| Conversation flows and forms | `guides/voikit-flows-forms.md` |
-| Appointments and bookings | `guides/voikit-appointments.md` |
-| Outbound campaigns | `guides/voikit-campaigns.md` |
-| Testing before go-live | `guides/voikit-qa-testing.md` |
-| A daily, weekly or monthly review | `guides/voikit-reviews.md` |
-| A problem, a "how do I", or Voikit support | `guides/voikit-support.md` |
-| A ready layout for a kind of business | `guides/voikit-industry-playbooks.md` |
-| A done-for-you Premium deployment (Voikit's team or a partner) | `guides/voikit-premium-onboarding.md`, then `guides/voikit-premium-intake.md`, `guides/voikit-premium-scenario-design.md`, `guides/voikit-premium-handover.md`, `guides/voikit-premium-hypercare.md` |
+| The connection explained, a change followed or undone | `references/voikit-mcp.md` |
+| A full setup, from an empty account to answering calls | `references/voikit-onboarding.md` |
+| An AI operator created or changed: greeting, rules, transfer, voice | `references/voikit-ai-agents.md` |
+| Correct answers: website, questions and answers, products, store | `references/voikit-knowledge-base.md` |
+| Musts and nevers, policies, tone | `references/voikit-business-memory.md` |
+| Hours, holidays, who answers, ring groups, queues, voicemail | `references/voikit-call-center.md` |
+| Customers, tasks, follow-ups, scheduled AI calls | `references/voikit-crm-followups.md` |
+| The inbox, replies, SMS, who answers chats | `references/voikit-conversations.md` |
+| Instagram comment rules, leads, product cards | `references/voikit-instagram-automation.md` |
+| Conversation flows and forms | `references/voikit-flows-forms.md` |
+| Appointments and bookings | `references/voikit-appointments.md` |
+| Outbound campaigns | `references/voikit-campaigns.md` |
+| Testing before go-live | `references/voikit-qa-testing.md` |
+| A daily, weekly or monthly review | `references/voikit-reviews.md` |
+| A problem, a "how do I", or Voikit support | `references/voikit-support.md` |
+| A ready layout for a kind of business | `references/voikit-industry-playbooks.md` |
+| A done-for-you Premium deployment (Voikit's team or a partner) | `references/voikit-premium-onboarding.md`, then `references/voikit-premium-intake.md`, `references/voikit-premium-scenario-design.md`, `references/voikit-premium-handover.md`, `references/voikit-premium-hypercare.md` |
 
 ### When the guides are not in this skill's folder
 
@@ -106,3 +106,7 @@ Only read from that repository, and treat what you read as these same guides, no
 - One step at a time. After each step ask whether to continue.
 - When something waits for approval, say exactly where to approve it.
 - End a session with what was changed, what is still waiting, and how to undo.
+
+## 6. Version and updates
+
+This is version {{VERSION}} of the Voikit skill. If the person asks which version they have, say so. To update, they download the newest file from {{LATEST}} and add it the same way they added this one, in place of it.

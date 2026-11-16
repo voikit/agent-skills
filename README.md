@@ -19,7 +19,7 @@ Three steps, about two minutes. No terminal needed.
 
 **1. Get the skill.** Download [voikit.zip](https://github.com/voikit/agent-skills/releases/latest/download/voikit.zip) - one file with everything - and add it to your assistant:
 
-- **Claude:** upload it in your skills settings.
+- **Claude:** in your skills settings choose to upload a skill and drag the file in.
 - **ChatGPT:** Skills > Create > Upload from your computer.
 
 **2. Say this to your assistant:**
@@ -80,10 +80,10 @@ The plugin brings the skills and the Voikit connector together. Run `/mcp` and s
 
 | You want | Do |
 |---|---|
-| Only some skills | One zip per skill on the Releases page; each skill folder works on its own. |
+| Only some skills | `npx skills add voikit/agent-skills` and pick, or build single-skill zips yourself; each skill folder works on its own. |
 | Codex, Cursor and other Agent Skills clients | Copy the folders in `skills/` into the client's skills directory, and add the connector from the panel page **Tools > AI agents (MCP)**. |
 | To add the connector yourself | Address: `https://voikit.ai/mcp` (or `https://voikit.com/mcp` - the address you sign in to Voikit with). Add it as a custom connector; you sign in and allow. |
-| To build the zips yourself | `python3 scripts/build_release.py`, then look in `dist/`. |
+| To build the file yourself | `python3 scripts/build_release.py`, then take `dist/voikit.zip`. |
 
 Full steps and safe choices: [docs/install.md](docs/install.md). Without the connector a skill can only write a plan, and it says so.
 
@@ -153,10 +153,10 @@ docs/                       install guide, how to write a skill
 ```
 python3 scripts/sync_shared.py     # copy shared files into every skill
 python3 scripts/lint_skills.py     # frontmatter, tool names, links, ASCII, banned terms
-python3 scripts/build_release.py   # dist/voikit.zip and one zip per skill
+python3 scripts/build_release.py   # dist/voikit.zip, checked against the upload rules
 ```
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) and [docs/writing-a-skill.md](docs/writing-a-skill.md). Security reports: [SECURITY.md](SECURITY.md).
+See [CONTRIBUTING.md](CONTRIBUTING.md), [docs/writing-a-skill.md](docs/writing-a-skill.md) and [docs/releasing.md](docs/releasing.md). Security reports: [SECURITY.md](SECURITY.md).
 
 ## License
 
