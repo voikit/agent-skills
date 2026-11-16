@@ -13,35 +13,83 @@ You:       Approve in the Voikit panel. Nothing changes before you say yes.
 
 **Every change has a reason, a preview and a way back.** The assistant proposes; you approve; anything applied can be reverted.
 
-## Install
+## Quick start
 
-You need two things: the skills, and the Voikit connector.
+Three steps, about two minutes. No terminal needed.
 
-### 1. The skills
+**1. Get the skill.** Download [voikit.zip](https://github.com/voikit/agent-skills/releases/latest/download/voikit.zip) - one file with everything - and add it to your assistant:
 
-| Where | How |
+- **Claude:** upload it in your skills settings.
+- **ChatGPT:** Skills > Create > Upload from your computer.
+
+**2. Say this to your assistant:**
+
+```
+Connect my Voikit account.
+```
+
+The skill walks you through it one step at a time: you add the Voikit connector, sign in to Voikit, and choose what the assistant may do. No token to copy, nothing to configure by hand. Choose "propose, you approve" and nothing changes without your yes.
+
+**3. Say what you need,** in your own language:
+
+```
+Set up Voikit for my business.
+```
+
+That is all. You approve each change in your Voikit panel; anything applied can be undone.
+
+### Straight from GitHub
+
+Prefer not to download anything? Give your assistant the address.
+
+**Claude (chat):** paste this.
+
+```
+Install the Voikit skill from https://github.com/voikit/agent-skills
+(the file bundle/voikit.md), then help me connect my Voikit account.
+```
+
+**ChatGPT:** paste this. ChatGPT builds the skill from the file and offers to install it.
+
+```
+Create a skill from this file, exactly as written, and install it:
+https://raw.githubusercontent.com/voikit/agent-skills/main/bundle/voikit.md
+Then help me connect my Voikit account.
+```
+
+Installed this way the skill is one file; it reads the detailed guides from this repository when it needs them. The uploaded `voikit.zip` carries the guides inside and works without web access.
+
+**Codex, Cursor and other coding agents:**
+
+```
+npx skills add voikit/agent-skills
+```
+
+It lists the skills in this repository; pick the ones you want.
+
+### Claude Code
+
+```
+/plugin marketplace add voikit/agent-skills
+/plugin install voikit@voikit-agent-skills
+```
+
+The plugin brings the skills and the Voikit connector together. Run `/mcp` and sign in to Voikit when asked. If you sign in to Voikit at voikit.com, add the connector with the ready command from the panel page **Tools > AI agents (MCP)** instead.
+
+### Other ways
+
+| You want | Do |
 |---|---|
-| Claude (web, desktop, mobile) | Paste this repository's address into a chat and ask Claude to install the skills, or upload a skill zip in your skills settings. |
-| ChatGPT | Skills > Create > Upload from your computer, one zip per skill. |
-| Claude Code | `/plugin marketplace add voikit/agent-skills` then `/plugin install voikit@voikit-agent-skills`, or copy the folders in `skills/` into `~/.claude/skills/` (or a project's `.claude/skills/`). |
-| Codex, Cursor and other Agent Skills clients | Copy the folders in `skills/` into the client's skills directory. |
+| Only some skills | One zip per skill on the Releases page; each skill folder works on its own. |
+| Codex, Cursor and other Agent Skills clients | Copy the folders in `skills/` into the client's skills directory, and add the connector from the panel page **Tools > AI agents (MCP)**. |
+| To add the connector yourself | Address: `https://voikit.ai/mcp` (or `https://voikit.com/mcp` - the address you sign in to Voikit with). Add it as a custom connector; you sign in and allow. |
+| To build the zips yourself | `python3 scripts/build_release.py`, then look in `dist/`. |
 
-Zips: one per skill on the Releases page, or build them yourself with `python3 scripts/build_release.py` (they land in `dist/`).
-
-Start with `voikit-mcp` and `voikit-onboarding`. Add the others as you need them; every skill folder is self-contained.
-
-### 2. The Voikit connector
-
-The server address is `https://voikit.ai/mcp`.
-
-- **Claude and ChatGPT:** add a custom connector (remote MCP server) with that address. You sign in to Voikit and choose, on Voikit's own consent page, what the assistant may see, what it may change, and how changes are approved. No token to copy.
-- **Claude Code, Cursor and other clients with a config file:** in the Voikit panel open **Tools > AI agents (MCP)**, create a connection and copy the ready command. The token is shown once.
-
-Begin with the approval mode "propose, you approve". Full steps: [docs/install.md](docs/install.md).
-
-Without the connector a skill can only write a plan, and it says so.
+Full steps and safe choices: [docs/install.md](docs/install.md). Without the connector a skill can only write a plan, and it says so.
 
 ## The skills
+
+`voikit.zip` contains all of them as guides behind one skill. They are also available one by one.
 
 ### Core
 
@@ -88,6 +136,7 @@ For Voikit's deployment team and partners who configure an account on a customer
 ## Repository layout
 
 ```
+bundle/voikit.md             the router of the one-file "voikit" skill (built into dist/voikit.zip)
 skills/<name>/SKILL.md      the skill
 skills/<name>/references/   rules and background the skill reads (generated copies)
 skills/<name>/assets/       templates the skill fills in (generated copies)
@@ -104,7 +153,7 @@ docs/                       install guide, how to write a skill
 ```
 python3 scripts/sync_shared.py     # copy shared files into every skill
 python3 scripts/lint_skills.py     # frontmatter, tool names, links, ASCII, banned terms
-python3 scripts/build_release.py   # dist/<skill>.zip
+python3 scripts/build_release.py   # dist/voikit.zip and one zip per skill
 ```
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) and [docs/writing-a-skill.md](docs/writing-a-skill.md). Security reports: [SECURITY.md](SECURITY.md).

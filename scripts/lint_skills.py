@@ -93,6 +93,28 @@ def check_skill(name, tools, allow):
         err(path, "must tell the assistant to read references/operating-rules.md")
 
 
+def check_bundle(names):
+    """bundle/voikit.md is the router of the single-file skill built by build_release.py."""
+    path = os.path.join(ROOT, "bundle", "voikit.md")
+    if not os.path.exists(path):
+        return err(path, "missing (the single-file voikit skill is built from it)")
+    meta, body = parse_frontmatter(read(path))
+    if meta is None or meta.get("name") != "voikit":
+        err(path, 'frontmatter name must be "voikit"')
+    desc = (meta or {}).get("description", "")
+    if not 40 <= len(desc) <= 1024 or "Use " not in desc or "<" in desc or ">" in desc:
+        err(path, "description: 40-1024 characters, says when to use, no angle brackets")
+    listed = set(re.findall(r"guides/([a-z0-9-]+)\.md", body))
+    for name in sorted(set(names) - listed):
+        err(path, f"does not route to guides/{name}.md")
+    for name in sorted(listed - set(names) - {"voikit-something"}):
+        err(path, f"routes to guides/{name}.md but there is no such skill")
+    shared = {"references/" + f for f in os.listdir(os.path.join(ROOT, "shared")) if f.endswith(".md")}
+    for rel in sorted(set(POINTER_RE.findall(body))):
+        if rel.startswith("references/") and rel not in shared:
+            err(path, f"points to {rel}, which is not in shared/")
+
+
 def check_tool_names(path, tools, allow):
     if tools is None:
         return
@@ -111,6 +133,7 @@ def main():
         err(SKILLS_DIR, "no skills found")
     for name in names:
         check_skill(name, tools, allow)
+    check_bundle(names)
     for path in text_files():
         rel = os.path.relpath(path, ROOT)
         text = read(path)

@@ -9,5 +9,11 @@
   "homepage": "https://github.com/voikit/agent-skills",
   "repository": "https://github.com/voikit/agent-skills",
   "license": "Apache-2.0",
+  "mcpServers": {
+    "voikit": {
+      "type": "http",
+      "url": "https://voikit.ai/mcp"
+    }
+  },
   "keywords": ["voikit", "mcp", "voice-ai", "ai-receptionist", "call-center", "crm", "agent-skills"]
 }

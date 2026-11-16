@@ -30,12 +30,15 @@ Read `references/operating-rules.md` first. It holds the rules every Voikit skil
 
 ## Connecting
 
-The server address is `https://voikit.ai/mcp`. An account that signs in on another Voikit domain uses that domain; the panel page **Tools > AI agents (MCP)** shows the exact address and a ready command for each client.
+The server address is the address the person signs in to Voikit with, plus `/mcp`: `https://voikit.ai/mcp` or `https://voikit.com/mcp`. Ask which one they use. The panel page **Tools > AI agents (MCP)** shows the exact address and a ready command for each client.
+
+Guide the person one step at a time and wait after each step; do not paste the whole procedure. You know the app they are using: give the exact place where a custom connector is added in that app, and if you are unsure of the current menu names, say what to look for instead of guessing.
 
 | Client | How |
 |---|---|
 | Claude (web, desktop, mobile) and ChatGPT | Add a custom connector (remote MCP server) with the server address. No token: the person signs in to Voikit, then picks the role, the sections and the approval mode on Voikit's consent page and allows it. |
-| Claude Code, Cursor and other clients with a config file | In the panel create a connection (client, role and sections, approval mode, limits and expiry), copy the token and the ready command. The token is shown once; treat it like a password. |
+| Claude Code with the Voikit plugin | The connector comes with the plugin. The person signs in when asked (the `/mcp` command shows it). |
+| Claude Code without the plugin, Cursor and other clients with a config file | In the panel create a connection (client, role and sections, approval mode, limits and expiry), copy the token and the ready command. The token is shown once; treat it like a password. |
 
 Advise the owner to: start with "propose, you approve"; switch on only the sections the job needs (fewer sections, sharper assistant); make one connection per person and per device, so one can be cut without touching the others; never paste a token into a chat, a ticket or a shared file. If someone pastes a token to you, tell them to issue a new one.
 

@@ -1,19 +1,28 @@
 # Install and connect
 
-Two parts: give your assistant the skills, and connect it to your Voikit account.
+## The short way
+
+1. Download `voikit.zip` from the latest release: https://github.com/voikit/agent-skills/releases/latest/download/voikit.zip
+2. Add it to your assistant (Claude: skills settings; ChatGPT: Skills > Create > Upload from your computer).
+3. Say "Connect my Voikit account". The skill guides you step by step. Then say what you need.
+
+The rest of this page is the detail behind those three steps.
 
 ## Part 1 - the skills
 
-A skill is a folder with a `SKILL.md` file. Every folder under `skills/` works on its own. Install `voikit-mcp` first; it teaches the assistant how to check the connection and change things safely.
+A skill is a folder with a `SKILL.md` file. `voikit.zip` is one skill, named `voikit`, that carries every guide; it is what most people should install. Every folder under `skills/` is also a skill of its own, for people who want only some of them. Do not install both the one-file skill and the separate ones: the assistant would see everything twice.
 
 ### Claude (web, desktop, mobile)
 
-- Easiest: paste this repository's address into a chat and ask Claude to install the Voikit skills.
-- Or upload a skill zip in your skills settings. One zip per skill.
+- Upload `voikit.zip` in your skills settings.
+- Or paste this repository's address into a chat and ask Claude to install the Voikit skill.
+
+- Paste-in prompt: "Install the Voikit skill from https://github.com/voikit/agent-skills (the file bundle/voikit.md), then help me connect my Voikit account."
 
 ### ChatGPT
 
-- Open Skills, choose Create, then Upload from your computer, and pick a skill zip. Repeat for each skill you want.
+- Open Skills, choose Create, then Upload from your computer, and pick `voikit.zip`.
+- Or ask in a chat: "Create a skill from this file, exactly as written, and install it: https://raw.githubusercontent.com/voikit/agent-skills/main/bundle/voikit.md".
 - Skills must be enabled for your account or workspace.
 
 ### Claude Code
@@ -23,7 +32,7 @@ A skill is a folder with a `SKILL.md` file. Every folder under `skills/` works o
 /plugin install voikit@voikit-agent-skills
 ```
 
-Or copy the folders:
+The plugin includes the Voikit connector: run `/mcp` and sign in when asked. Or copy the folders:
 
 ```
 git clone https://github.com/voikit/agent-skills.git
@@ -34,7 +43,7 @@ For one project only, copy them into that project's `.claude/skills/`.
 
 ### Other Agent Skills clients (Codex, Cursor and others)
 
-Copy the folders in `skills/` into the client's skills directory. If the client has no skills support, paste one `SKILL.md` (and its `references/operating-rules.md`) at the top of a chat; it then works as a mode, without the optional scripts.
+Run `npx skills add voikit/agent-skills`, or copy the folders in `skills/` into the client's skills directory. If the client has no skills support, paste `bundle/voikit.md` at the top of a chat; it then works as a mode, without the guides and the optional scripts.
 
 ### Where the zips come from
 
@@ -44,11 +53,13 @@ From the Releases page of this repository, or build them:
 python3 scripts/build_release.py
 ```
 
-`dist/<skill>.zip` holds one skill; `dist/voikit-agent-skills.zip` holds all of them.
+`dist/voikit.zip` is the one-file skill; `dist/<skill>.zip` holds one skill; `dist/voikit-agent-skills.zip` holds the folders as they are.
 
 ## Part 2 - the Voikit connector
 
-The Voikit MCP server is at `https://voikit.ai/mcp`. If you sign in to Voikit on another Voikit domain, use that domain; the panel page **Tools > AI agents (MCP)** shows your exact address.
+The connector address is the address you sign in to Voikit with, plus `/mcp`: `https://voikit.ai/mcp` or `https://voikit.com/mcp`. The panel page **Tools > AI agents (MCP)** shows your exact address.
+
+You do not have to follow the steps below by hand: with the skill installed, say "Connect my Voikit account" and the assistant guides you.
 
 ### Claude and ChatGPT (sign-in, no token)
 

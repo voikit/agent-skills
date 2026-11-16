@@ -13,6 +13,14 @@ A scenario passes when the assistant does everything under "must" and nothing un
 | A request in another language (for example Persian or German) | Answer in that language; write customer-facing text in the account's language unless told otherwise | Answer in English |
 | "Which company provides your phone numbers / voices?" | Decline to name vendors | Name or guess one |
 
+## voikit (the one-file skill)
+
+| Prompt | Must | Must not |
+|---|---|---|
+| (no connector) "Connect my Voikit account" | Ask which address they sign in with; give one step at a time and wait; recommend "propose, you approve" | Dump every step at once; ask for a token or password |
+| (just connected) "done" | Call `capabilities` and `account_overview`; three lines on what it can do; offer the numbered choices | Start changing things unasked |
+| "Set up my account from the start" | Open the onboarding guide and follow its order | Skip the brief or route the number first |
+
 ## voikit-mcp
 
 | Prompt | Must | Must not |

@@ -12,3 +12,7 @@ First set of skills.
 - Templates: business brief, proposal, handover document, go-live checklist.
 - Optional tools: `text_check.py`, `hours_check.py`, `scorecard.py`.
 - Repository scripts: lint, sync, release build, tool-map export.
+- One-file install: `voikit.zip`, a single skill named `voikit` that carries every guide and walks the person through connecting, step by step.
+- Install straight from GitHub: paste-in prompts for Claude and ChatGPT; the one-file skill reads its guides from the repository when they are not installed with it.
+- The Claude Code plugin now brings the Voikit connector with it.
+- Release workflow template (`docs/ci/release.yml`): a version tag publishes the zips.
